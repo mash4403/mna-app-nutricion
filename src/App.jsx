@@ -115,11 +115,14 @@ function App() {
       <button onClick={calculate} className="bg-blue-600 text-white px-4 py-2 mt-6 rounded">Calcular</button>
 
       {result && (
-        <div className="mt-4 p-4 border rounded bg-gray-50">
-          <p><strong>IMC:</strong> {result.imc}</p>
-          <p><strong>Score total:</strong> {result.score}</p>
-          <p className={\`font-semibold mt-2 \${getColor(result.score)}\`}>Clasificación: {result.classification}</p>
-          <button onClick={exportPDF} className="mt-3 bg-green-600 text-white px-4 py-2 rounded">Exportar PDF</button>
+  <div className="mt-4 p-4 border rounded bg-gray-50">
+    <p><strong>IMC:</strong> {result.imc}</p>
+    <p><strong>Score total:</strong> {result.score}</p>
+    <p className={`font-semibold mt-2 ${getColor(result.score)}`}>Clasificación: {result.classification}</p>
+    <button onClick={exportPDF} className="mt-3 bg-green-600 text-white px-4 py-2 rounded">Exportar PDF</button>
+  </div>
+)}
+
         </div>
       )}
     </div>
